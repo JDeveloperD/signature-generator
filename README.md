@@ -12,6 +12,7 @@ When I sent my emails, at the end of each message I put my personal information 
 - Personalized information
 - Theme changes
 - Personal photo and company logo
+- Copy Signature
 
 ## :wrench: Used Tecnologies
 
@@ -21,3 +22,4 @@ When I sent my emails, at the end of each message I put my personal information 
 - Bootstrap 5
 - Gh Pages
 - React Hook Form
+- Framer Motion
