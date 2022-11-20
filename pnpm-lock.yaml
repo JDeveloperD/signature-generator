@@ -24,6 +24,7 @@ specifiers:
   prettier: ^2.7.1
   react: ^18.2.0
   react-bootstrap: ^2.5.0
+  react-copy-code: ^2.1.2
   react-copy-to-clipboard: ^5.1.0
   react-dom: ^18.2.0
   react-hook-form: ^7.38.0
@@ -45,6 +46,7 @@ dependencies:
   polished: 4.2.2
   react: 18.2.0
   react-bootstrap: 2.6.0_2zx2umvpluuhvlq44va5bta2da
+  react-copy-code: 2.1.2_2zpt4ilzykmne4yndyzrqd4gdm
   react-copy-to-clipboard: 5.1.0_react@18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.39.3_react@18.2.0
@@ -2699,6 +2701,19 @@ packages:
       react-transition-group: 4.4.5_biqbaboplfbrettd7655fr4n2y
       uncontrollable: 7.2.1_react@18.2.0
       warning: 4.0.3
+    dev: false
+
+  /react-copy-code/2.1.2_2zpt4ilzykmne4yndyzrqd4gdm:
+    resolution: {integrity: sha512-soeQmbEIBYnfbn5NJLoG5smuNA1azh5Mwwpls4Ay+Sc4ipi4DXKDCMNiuqr/Ecf/+7HHcYh7V1wvPDzmXPeRTg==}
+    peerDependencies:
+      highlight.js: '>=9'
+      react: '>=16.6'
+      react-dom: '>=16.6'
+      styled-components: '>=4'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      styled-components: 5.3.6_vtcxgy2wlmese7djxl6h7ok674
     dev: false
 
   /react-copy-to-clipboard/5.1.0_react@18.2.0:

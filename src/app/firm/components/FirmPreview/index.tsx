@@ -1,11 +1,13 @@
-import React from 'react';
-import { WebWindow } from '../../../../components/utils';
+import { WebWindow } from '@components/utils';
 import FirmCard from '../FirmCard/FirmCard';
+import { Fragment } from 'react';
 
 const FirmPreview = () => {
   return (
     <WebWindow>
-      <FirmCard />
+      <Fragment>
+        <FirmCard />
+      </Fragment>
     </WebWindow>
   );
 };

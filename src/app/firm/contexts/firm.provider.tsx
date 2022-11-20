@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useRef } from 'react';
 import {
   CompanyInfo,
   ContactInfo,
@@ -17,6 +17,7 @@ export const useFirm = () => useContext(FirmContext);
 
 export const FirmProvider = ({ children }: { children: ReactNode }) => {
   const [state, setState] = useState(FIRM_INITIAL_STATE);
+  const copyTemplateRef = useRef<HTMLTableElement>(null);
 
   const setTheme = (key: keyof ThemeFirm, value: any) => {
     setState({
@@ -118,6 +119,7 @@ export const FirmProvider = ({ children }: { children: ReactNode }) => {
     <FirmContext.Provider
       value={{
         state,
+        copyTemplateRef,
         setTheme,
         clearFirm,
         setPersonal,

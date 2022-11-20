@@ -16,6 +16,7 @@ import AnimateFade from '../AnimateFade';
 const Template1 = () => {
   const {
     state: { firm, theme },
+    copyTemplateRef,
   } = useFirm();
 
   const styleTable = {
@@ -86,7 +87,12 @@ const Template1 = () => {
 
   return (
     <AnimateFade>
-      <table cellPadding='16px' cellSpacing='0' style={styleTable}>
+      <table
+        cellPadding='16px'
+        cellSpacing='0'
+        style={styleTable}
+        ref={copyTemplateRef}
+      >
         <tbody>
           <tr>
             <td width='160px' style={{ textAlign: 'center' }}>

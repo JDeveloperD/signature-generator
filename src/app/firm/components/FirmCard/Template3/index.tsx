@@ -9,16 +9,17 @@ import link from '@static/firm-icons/link-icon.webp';
 import email from '@static/firm-icons/email-icon.webp';
 import phone from '@static/firm-icons/phone-icon.webp';
 import { useFirm } from '@app/firm/contexts/firm.provider';
-import { motion } from 'framer-motion';
 import AnimateFade from '../AnimateFade';
+
 const Template3 = () => {
   const {
     state: { firm, theme },
+    copyTemplateRef,
   } = useFirm();
 
   const styleTable: CSSProperties = {
     width: '100%',
-    maxWidth: '500px',
+    maxWidth: '600px',
     borderCollapse: 'collapse',
   };
 
@@ -86,10 +87,15 @@ const Template3 = () => {
 
   return (
     <AnimateFade>
-      <table cellPadding='16px' cellSpacing='0' style={styleTable}>
+      <table
+        cellPadding='16px'
+        cellSpacing='0'
+        style={styleTable}
+        ref={copyTemplateRef}
+      >
         <tbody>
           <tr style={styleBorderBottom}>
-            <td style={{ width: '160px', verticalAlign: 'middle' }}>
+            <td style={{ width: '300px', verticalAlign: 'middle' }}>
               {/* Personal Info */}
               <div style={stylePersonalInfo}>
                 <h3 style={styleName}>

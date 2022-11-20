@@ -1,5 +1,4 @@
 import { CSSProperties } from 'react';
-// import imgMail from '@static/mail-all.png';
 import imgEmpty from '@static/img-empty.jpg';
 import logoEmpty from '@static/logo-empty.jpg';
 import linkedin from '@static/firm-icons/linkedin-icon.webp';
@@ -15,6 +14,7 @@ import AnimateFade from '../AnimateFade';
 const Template2 = () => {
   const {
     state: { firm, theme },
+    copyTemplateRef,
   } = useFirm();
 
   const styleTable = {
@@ -85,7 +85,12 @@ const Template2 = () => {
 
   return (
     <AnimateFade>
-      <table cellPadding='16px' cellSpacing='0' style={styleTable}>
+      <table
+        cellPadding='16px'
+        cellSpacing='0'
+        style={styleTable}
+        ref={copyTemplateRef}
+      >
         <tbody>
           <tr>
             <td>

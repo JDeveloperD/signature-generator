@@ -1,21 +1,24 @@
-import React from 'react';
-import Button from '../../../../components/inputs/Button';
-import { useFirm } from '../../contexts/firm.provider';
 import FeatherIcon from 'feather-icons-react';
 import { toast } from 'react-toastify';
+import { useCopy } from '@app/firm/hooks/useCopy';
+import { Button } from '@components/inputs';
+import { useFirm } from '@app/firm/contexts/firm.provider';
 
 const FirmActions = () => {
   const {
     clearFirm,
     state: { firm },
+    copyTemplateRef,
   } = useFirm();
-
   const copyFirm = () => {
     if (!firm.personal.name) {
-      toast.error('Nombre: Introduce información válida', {
+      return toast.error('Nombre: Introduce información válida', {
         theme: 'colored',
       });
     }
+
+    useCopy(copyTemplateRef);
+    toast.success('Firma creada! ahora pegala en tu correo', { theme: 'dark' });
   };
 
   return (

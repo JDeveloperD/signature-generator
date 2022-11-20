@@ -1,3 +1,5 @@
+import { RefObject } from 'react';
+
 export interface SocialNetworks {
   linkedin: string;
   facebook: string;
@@ -53,6 +55,7 @@ export interface FirmState {
 
 export interface FirmStore {
   state: FirmState;
+  copyTemplateRef: RefObject<HTMLTableElement>;
   setTheme: (key: keyof ThemeFirm, value: any) => void;
   setPersonal: (key: keyof PersonalInfo, value: any) => void;
   setAdditionl: (value: string) => void;
