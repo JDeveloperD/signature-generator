@@ -11,7 +11,7 @@ const Header = () => {
         <img src={logoLight} alt='Pandora Marketing' width={180} />
       </a>
 
-      <Button
+      {/* <Button
         onClick={handleSignOut}
         variant='outlined'
         color='white'
@@ -19,7 +19,7 @@ const Header = () => {
       >
         <FeatherIcon icon='log-out' size='20' />
         Salir
-      </Button>
+      </Button> */}
     </header>
   );
 };

@@ -7,7 +7,7 @@ import imgTabTemplate from '../../../static/template-tab.svg';
 
 type TabHeadProps = {
   tabActive: number;
-  handleTab: React.Dispatch<React.SetStateAction<number>>;
+  handleTab: (tab: number) => void;
 };
 
 const TabHead: FC<TabHeadProps> = ({ tabActive, handleTab }) => {

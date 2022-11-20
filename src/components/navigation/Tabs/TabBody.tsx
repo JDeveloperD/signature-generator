@@ -7,15 +7,28 @@ import TabTwo from './TabTwo';
 
 type TabBodyProps = {
   tabActive: number;
+  prevActive: number;
 };
 
-const TabBody: FC<TabBodyProps> = ({ tabActive }) => {
+export type ItemsTranstition = {
+  translateAnimation: 'left' | 'right';
+};
+
+const TabBody: FC<TabBodyProps> = ({ tabActive, prevActive }) => {
   return (
     <Tab.Body>
-      {tabActive === 1 && <TabOne />}
-      {tabActive === 2 && <TabTwo />}
-      {tabActive === 3 && <TabThree />}
-      {tabActive === 4 && <TabFour />}
+      {tabActive === 1 && (
+        <TabOne translateAnimation={prevActive < 1 ? 'right' : 'left'} />
+      )}
+      {tabActive === 2 && (
+        <TabTwo translateAnimation={prevActive <= 2 ? 'right' : 'left'} />
+      )}
+      {tabActive === 3 && (
+        <TabThree translateAnimation={prevActive <= 3 ? 'right' : 'left'} />
+      )}
+      {tabActive === 4 && (
+        <TabFour translateAnimation={prevActive <= 4 ? 'right' : 'left'} />
+      )}
     </Tab.Body>
   );
 };

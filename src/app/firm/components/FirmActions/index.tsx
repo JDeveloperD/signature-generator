@@ -25,7 +25,7 @@ const FirmActions = () => {
           variant='contained'
           size='lg'
           color='dark-900'
-          className='mt-3'
+          className='mt-5'
           onClick={copyFirm}
         >
           Crear Firma

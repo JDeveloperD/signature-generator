@@ -51,7 +51,7 @@ const Body = styled.div`
   height: calc(100vh - 70px);
   background-color: ${({ theme }) => theme.colors['dark-900']};
   padding: 3rem 4rem;
-  overflow: auto;
+  overflow-y: auto;
 `;
 
 export default {
