@@ -117,7 +117,7 @@ const Template3 = () => {
             </td>
             <td
               style={{
-                width: '120px',
+                width: '160px',
                 textAlign: 'right',
                 verticalAlign: 'middle',
               }}
